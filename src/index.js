@@ -13,4 +13,4 @@ const Root = () => {
     )
 } 
 
-render(<Root/>,document.querySelector('#root'));
+render(<Root/>,document.querySelector('#main'));

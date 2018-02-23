@@ -6,7 +6,7 @@ import StorePicker from './StorePicker';
 import Contact from './Contact';
 import NoMatch from './NoMatch';
 
-import '../css/navigation.css';
+//import '../css/navigation.css';
 
 
 const Navigation = () => (
@@ -31,8 +31,8 @@ const Switching= () => (
 
 const AppRouter = () => (
     <div className='app'>
-        <h1>Application Router</h1>
-        <Navigation />   
+        {/* <h1>Application Router</h1>
+        <Navigation /> */}
         <Switching />
     </div>
 );

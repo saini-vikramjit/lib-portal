@@ -251,13 +251,13 @@ h2 {
   margin-bottom: 2rem;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 header.top {
   text-align: center;
 }
 header.top h1 {
-  font-size: 14.4rem;
+  font-size: 10.4rem;
   line-height: 0.7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -500,7 +500,7 @@ ul.order li span.count span {
 }
 .menu-fish p {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 .menu-fish .fish-name {
   margin: 0;
@@ -516,6 +516,7 @@ ul.order li span.count span {
 }
 .menu-fish .price {
   font-size: 1.4rem;
+  font-weight: bold;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
