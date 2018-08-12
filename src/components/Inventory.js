@@ -9,10 +9,6 @@ class Inventory extends React.Component {
         super();
         this.renderInventory = this.renderInventory.bind(this);
         this.changeFishData = this.changeFishData.bind(this);
-        this.renderLogin = this.renderLogin.bind(this);
-        this.authenicate = this.authenicate.bind(this);
-        this.authHandler = this.authHandler.bind(this);
-        this.logout = this.logout.bind(this);
 
         this.state = {
             uid: null,
@@ -28,7 +24,7 @@ class Inventory extends React.Component {
         });
     }
 
-    logout(){
+    logout = () => {
         const me = this;
         firebase.auth().signOut().then(function(){
             me.setState({uid: null});
@@ -37,8 +33,10 @@ class Inventory extends React.Component {
         });
     }
 
-    authenicate(providerVal){
+    authenicate = (e) => {
         
+        e.preventDefault();
+        console.log(e.target.value);
         var provider = new firebase.auth.GithubAuthProvider();
         provider.addScope('repo');
         firebase.auth().signInWithPopup(provider)
@@ -49,7 +47,7 @@ class Inventory extends React.Component {
             });
     }
 
-    authHandler(authData){
+    authHandler = (authData) => {
 
         const uid = (authData.user !== undefined) ? authData.user.uid : authData.uid;
         const storeRef = firebase.database().ref(this.props.storeId);
@@ -69,12 +67,12 @@ class Inventory extends React.Component {
         });
     }
 
-    renderLogin(){
+    renderLogin = () => {
         return(
             <nav className="login">
                 <h2>Inventory</h2>
                 <p>Sign in to manage store's inventory</p>
-                <button className="github" onClick={() => this.authenicate('github.com')}>Login with Github</button>
+                <button className="github" value="github.com" onClick={ this.authenicate }>Login with Github</button>
             </nav>
         )
     }

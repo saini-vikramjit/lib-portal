@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class StorePicker extends React.Component {
 
-    getToStore(e){
+    getToStore = (e) => {
         e.preventDefault();
         const storeId = this.storeInput.value;
         this.props.history.push(`/store/${storeId}`);
@@ -12,7 +12,7 @@ class StorePicker extends React.Component {
 
     render(){
         return (
-            <form className="store-selector" onSubmit={ (event) => this.getToStore(event) }>
+            <form className="store-selector" onSubmit={ this.getToStore }>
                 <h2>Please enter the store</h2>
                 <input type="text" required placeholder="Store Name" defaultValue={ getFunName() } ref={ (input) => { this.storeInput = input; }} />
                 <button type="submit">Visit Store</button>
