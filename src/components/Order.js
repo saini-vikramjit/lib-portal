@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class Order extends React.Component {
     
     constructor(){
-        super();
+        super(props);
     }
 
     renderOrder = (key) => {

@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 class App extends React.Component {
 
     constructor(){
-        super();
+        super(props);
         this.addFish = this.addFish.bind(this);
         this.loadSamples = this.loadSamples.bind(this);
         this.addToOrder = this.addToOrder.bind(this);
