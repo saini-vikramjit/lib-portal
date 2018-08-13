@@ -5,7 +5,7 @@ import firebase from 'firebase';
 
 class Inventory extends React.Component {
     
-    constructor(){
+    constructor(props){
         super(props);
         this.renderInventory = this.renderInventory.bind(this);
         this.changeFishData = this.changeFishData.bind(this);

@@ -9,10 +9,10 @@ import PropTypes from 'prop-types';
 
 class App extends React.Component {
 
-    constructor(){
+    constructor(props){
         super(props);
         this.addFish = this.addFish.bind(this);
-        this.loadSamples = this.loadSamples.bind(this);
+        //this.loadSamples = this.loadSamples.bind(this);
         this.addToOrder = this.addToOrder.bind(this);
         this.updateFish = this.updateFish.bind(this);
         this.deleteFish = this.deleteFish.bind(this);
@@ -64,7 +64,7 @@ class App extends React.Component {
         this.setState({fishes});
     }
 
-    loadSamples(){
+    loadSamples = () => {
         this.setState({fishes: sampleFishes});
     }
 
